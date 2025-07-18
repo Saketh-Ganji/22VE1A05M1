@@ -12,7 +12,7 @@ app.post('/short',(req, res)=>{
   const {ourl}=req.body;
 
   if(!ourl){ 
-    return res.status(400).json({ message: 'Original URL is required' });
+    return res.status(400).json({ message:'Original URL is required'});
   }
   const sid=nanoid(6);
   db[sid]=ourl;
